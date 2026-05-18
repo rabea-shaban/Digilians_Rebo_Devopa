@@ -1,0 +1,20 @@
+name: Trigger Filter
+
+on:
+
+  push:
+    branches:
+      - main
+
+  pull_request:
+
+    paths-ignore:
+      - README.md
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Workflow Running"

@@ -1,0 +1,17 @@
+name: Run Script
+
+on:
+  push:
+
+jobs:
+  script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Give Permission
+        run: chmod +x hello.sh
+
+      - name: Execute Script
+        run: ./hello.sh
